@@ -8,7 +8,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.dm_messages = True
 
-token = os.getenv("DISCORD_USER")
+token = os.getenv("DISCORD_TOKEN")
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -44,3 +44,4 @@ threading.Thread(target=run_health_server, daemon=True).start()
 
 # Run the bot with the user token
 bot.run(token)
+
